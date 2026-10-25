@@ -503,6 +503,9 @@ body {
 .main5_admins_description_rank_admin {
     color: #f82f2f;
 }
+.main5_admins_description_rank_helper {
+    color: #55ffff;
+}
 .main5_admins_description_title {
     text-align: center;
     font-size:1.5rem;
