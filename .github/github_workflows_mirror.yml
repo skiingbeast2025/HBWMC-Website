@@ -1,0 +1,28 @@
+name: Mirror repository
+
+on:
+  push:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Mirror all Git refs to destination
+        env:
+          SYNC_TOKEN: ${{ secrets.SYNC_TOKEN }}
+          SOURCE_REPO: ${{ github.repository }}
+          TARGET_REPO: TARGET_OWNER/TARGET_REPO
+        run: |
+          set -euo pipefail
+
+          auth_header="AUTHORIZATION: basic $(printf 'x-access-token:%s' "$SYNC_TOKEN" | base64 -w0)"
+
+          git -c http.extraheader="$auth_header" \
+            clone --mirror "https://github.com/${SOURCE_REPO}.git" mirror.git
+
+          git -C mirror.git -c http.extraheader="$auth_header" \
+            push --mirror "https://github.com/${TARGET_REPO}.git"
