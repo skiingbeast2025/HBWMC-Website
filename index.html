@@ -9,6 +9,47 @@
     <link rel="stylesheet" href="media/style.css?v=2">
     <link href="https://fonts.bunny.net/css?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+      .desktop_navbar_dropdown {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+      }
+      .desktop_navbar_dropdown_content {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #121317;
+        min-width: 230px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+        border-radius: 10px;
+        padding: 8px 0;
+        z-index: 1000;
+        border: 1px solid rgba(255,255,255,0.15);
+        backdrop-filter: blur(10px);
+      }
+      .desktop_navbar_dropdown:hover .desktop_navbar_dropdown_content {
+        display: block;
+      }
+      .desktop_navbar_dropdown_content a {
+        color: #fff;
+        padding: 10px 18px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 1.05rem;
+        font-weight: 500;
+        text-align: left;
+        transition: all 0.3s;
+      }
+      .desktop_navbar_dropdown_content a:hover {
+        background-color: rgba(255,255,255,0.08);
+        color: #55ffff;
+      }
+    </style>
 </head>
 <body>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -18,6 +59,13 @@
       <a href="#discord" class="desktop_navbar_link scroll">Discord</a>
       <a href="#about" class="desktop_navbar_link scroll">About Us</a>
       <a href="https://stats.hbwmcofficial.xyz" target="_blank" rel="noopener noreferrer" class="desktop_navbar_link">Live Stats</a>
+      <div class="desktop_navbar_dropdown">
+        <a href="https://github.com/skiingbeast2025/lunamix-eaglercraft/releases/latest/download/HBWMC-EAGLERCRAFT.html" class="desktop_navbar_link" download="HBWMC-EAGLERCRAFT.html">Eaglercraft</a>
+        <div class="desktop_navbar_dropdown_content">
+          <a href="https://github.com/skiingbeast2025/lunamix-eaglercraft/releases/latest/download/HBWMC-EAGLERCRAFT.html" download="HBWMC-EAGLERCRAFT.html"><i class="fa fa-download"></i> Download Client (.html)</a>
+          <a href="https://skiingbeast2025.github.io/lunamix-eaglercraft/downloads/hbwmc.html" target="_blank" rel="noopener noreferrer"><i class="fa fa-play-circle"></i> Play in Browser (Web)</a>
+        </div>
+      </div>
       <div class="desktop_navbar_link2_div">
           <a href="#join" class="desktop_navbar_link2 scroll">Join Us!</a>
       </div>
@@ -29,6 +77,8 @@
           <a class="mobile_navbar_link scroll" onclick="mobile_navbar_link_hider()" href="#discord">Discord</a>
           <a class="mobile_navbar_link scroll" onclick="mobile_navbar_link_hider()" href="#about">About Us</a>
           <a class="mobile_navbar_link" href="https://stats.hbwmcofficial.xyz" target="_blank" rel="noopener noreferrer">Live Stats</a>
+          <a class="mobile_navbar_link" onclick="mobile_navbar_link_hider()" href="https://github.com/skiingbeast2025/lunamix-eaglercraft/releases/latest/download/HBWMC-EAGLERCRAFT.html" download="HBWMC-EAGLERCRAFT.html"><i class="fa fa-download"></i> Download Eaglercraft</a>
+          <a class="mobile_navbar_link" onclick="mobile_navbar_link_hider()" href="https://skiingbeast2025.github.io/lunamix-eaglercraft/downloads/hbwmc.html" target="_blank" rel="noopener noreferrer"><i class="fa fa-play-circle"></i> Play Eaglercraft (Web)</a>
           <a class="mobile_navbar_link scroll" onclick="mobile_navbar_link_hider()" href="#join">Join Us</a>
         </div>
         <div class="icon" onclick="mobile_navbar_link_hider()">
