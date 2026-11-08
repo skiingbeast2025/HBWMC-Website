@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HBW Minecraft Server - Eaglercraft Edition</title>
     <link rel="icon" type="image/png" href="media/favicon.png?v=2">
-    <link rel="stylesheet" href="media/style.css?v=2">
+    <link rel="stylesheet" href="media/style.css?v=3">
     <link href="https://fonts.bunny.net/css?family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
@@ -117,6 +117,40 @@
         color: var(--accent1);
         transform: translateY(-3px) scale(1.03);
         box-shadow: 0 8px 25px rgba(2, 219, 2, 0.25);
+      }
+    
+      @media only screen and (max-width: 600px) {
+        .eagler_hero {
+          padding: 6rem 1rem 3rem 1rem;
+          min-height: calc(100vh - 53px);
+        }
+        .eagler_logo {
+          width: 5.5rem;
+          height: 5.5rem;
+          margin-bottom: 1rem;
+        }
+        .eagler_hero_title {
+          font-size: 2rem;
+        }
+        .eagler_hero_subtitle {
+          font-size: 1.1rem;
+          margin: 1rem auto 2rem auto;
+          padding: 0 0.5rem;
+        }
+        .eagler_btn_group {
+          flex-direction: column;
+          width: 100%;
+          align-items: center;
+          gap: 0.85rem;
+        }
+        .eagler_btn {
+          width: 100%;
+          max-width: 20rem;
+          justify-content: center;
+          font-size: 1.1rem;
+          padding: 1rem 1.5rem;
+          box-sizing: border-box;
+        }
       }
     </style>
   </head>
