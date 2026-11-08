@@ -15,11 +15,17 @@ span {
     font-family: 'Space Grotesk', sans-serif;
 }
 
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
 body {
-    font-family:'Space Grotesk', sans-serif;
+    font-family: 'Space Grotesk', sans-serif;
     background-color: var(--background1);
     color: white;
-    margin:0px;
+    margin: 0px;
+    padding: 0px;
 }
 
 
@@ -130,37 +136,59 @@ body {
 
 .mobile_navbar {
     display: none;
-    overflow: hidden;
-    background-color: #00000033;
+    background-color: rgba(18, 19, 23, 0.96);
     backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
     position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    z-index: 5;
-    flex-direction: row;
+    z-index: 1000;
+    flex-direction: column;
     min-height: 53px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
 
 .mobile_navbar_logo_img {
-    position: absolute;
+    height: 40px;
+    width: auto;
     display: block;
-    height: 42px;
-    padding-left: .5rem;
-    top: 0;
-    left: 0;
-    padding-top: 3.5px;
+    padding-left: 0.75rem;
+    padding-top: 6.5px;
+}
+
+.mobile_navbar_logo_img_a {
+    display: block;
+    height: 53px;
+    box-sizing: border-box;
 }
 
 .mobile_navbar #mobile_navbar_links {
     display: none;
-    margin-top: 53px;
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
     width: 100%;
-    background-color: #00000011;
+    background-color: #121317;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    box-sizing: border-box;
 }
 
 .mobile_navbar_link {
-    padding:.5rem;
+    padding: 0.85rem 1.25rem;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    font-size: 1.05rem;
+    color: #e5e7eb;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.2s, color 0.2s;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.mobile_navbar_link:hover, .mobile_navbar_link:active {
+    background-color: rgba(255, 255, 255, 0.08);
+    color: var(--accent1);
 }
 
 .mobile_navbar a {
@@ -171,17 +199,15 @@ body {
 }
 
 .mobile_navbar .icon {
-    background-color: #00000044;
+    background-color: transparent;
     display: block;
     position: absolute;
     right: 0;
     top: 0;
-    padding: 16px;
-}
-
-.mobile_navbar_logo_img_a {
-    display: block;
-    background-color: #00000022;
+    padding: 15px 18px;
+    font-size: 1.35rem;
+    color: #fff;
+    cursor: pointer;
 } 
 
 
@@ -683,52 +709,172 @@ body {
 
 
 @media only screen and (max-width: 600px) {
-    .desktop_navbar{
-        display:none;
+    html, body {
+        overflow-x: hidden;
+        width: 100%;
     }
-    .mobile_navbar{
-        display:flex;
+    .desktop_navbar {
+        display: none;
+    }
+    .mobile_navbar {
+        display: flex;
     }
     .headline {
-        font-size:1.9rem;
+        font-size: 1.85rem;
+        margin-top: 1.5rem;
         margin-right: 1rem;
         margin-left: 1rem;
     }
+    .main1 {
+        padding-top: calc(var(--nice-padding) + 1.5rem);
+        padding-bottom: 2rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        box-sizing: border-box;
+    }
     .main1_logo {
-        max-width: 16rem;
+        max-width: 13rem;
+        width: 65%;
+        height: auto;
     }
     .main1_description {
-        font-size: 2.5rem;
-        margin-bottom: 2rem;
+        font-size: 1.85rem;
+        margin-bottom: 1.5rem;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+        line-height: 1.3;
+    }
+    .main1_ipcopier_div {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        position: relative;
     }
     .main1_ipcopier {
-        display: none;
-    }
-    .main5_admins_img {
-        align-self: center;
-        padding-top: 1rem;
-    }
-    .main5_admins_div{
+        display: flex !important;
         flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        max-width: 22rem;
+        margin: 0 auto;
+        padding: 0.85rem 1.25rem;
+        box-sizing: border-box;
+    }
+    .main1_ipcopier_text1 {
+        font-size: 1.25rem;
+        word-break: break-all;
+    }
+    .main1_ipcopier_text2 {
+        font-size: 0.95rem;
+    }
+    .main1_popup {
+        top: -3.5rem;
+        margin-top: 0;
+        font-size: 0.9rem;
+        padding: 0.4rem 1rem;
+    }
+    .main1_downarrow {
+        height: 1.25rem;
+        padding: 1.25rem;
+    }
+
+    /* Features Section */
+    .main2_features_div {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 0 1rem;
+        margin-left: 0;
+        margin-right: 0;
+        box-sizing: border-box;
+    }
+    .main2_feature {
+        width: 100%;
+        max-width: 22rem;
+        height: auto;
         min-height: 0;
+        margin: 0.75rem 0;
+        padding-bottom: 1.25rem;
+        box-sizing: border-box;
     }
-    .main5_admins_description_div {
-        max-width: 100%;
-        padding: 2rem;
+    .main2_feature_img {
+        width: 100%;
+        height: 11rem;
+        object-fit: cover;
+        border-radius: var(--roundness) var(--roundness) 0 0;
     }
+    .main2_feature_headline {
+        font-size: 1.35rem;
+        margin-top: 1rem;
+    }
+    .main2_feature_text {
+        font-size: 1.05rem;
+        margin: 0.75rem 1rem 1rem 1rem;
+        line-height: 1.45;
+    }
+
+    /* Discord Section */
     .main4_dc_div {
         flex-direction: column;
+        width: calc(100% - 2rem);
+        max-width: 22rem;
+        margin: 1.25rem auto;
+        box-sizing: border-box;
     }
     .main4_dc_widget {
         height: 20rem;
         width: 100%;
+        max-width: 100%;
     }
-    .main3_join_div {
-        min-width: 20rem;
-        min-height: 9rem;
+    .main4_dc_description_div {
+        padding: 0.5rem;
     }
-    .main3_join_content_div {
-        padding:1rem;
+    .main4_dc_description_title {
+        margin: 1rem;
+        font-size: 1.35rem;
+    }
+    .main4_dc_description {
+        margin: 0.5rem 1rem 1.25rem 1rem;
+        font-size: 1.05rem;
+    }
+    .main4_dc_button_a {
+        margin-bottom: 1.25rem;
+    }
+
+    /* Staff / Who we are */
+    .main5_admin_div {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 0 1rem;
+        box-sizing: border-box;
+    }
+    .main5_admins_div {
+        flex-direction: column;
+        width: 100%;
+        max-width: 22rem;
+        min-height: 0;
+        margin: 0.75rem 0;
+        box-sizing: border-box;
+    }
+    .main5_admins_img {
+        align-self: center;
+        padding-top: 1.25rem;
+        max-width: 6rem;
+        height: auto;
+    }
+    .main5_admins_description_div {
+        max-width: 100%;
+        padding: 1rem 1.25rem 1.25rem 1.25rem;
+        text-align: center;
+        box-sizing: border-box;
+    }
+    .main5_admins_description_title {
+        font-size: 1.25rem;
+    }
+    .main5_admins_description {
+        font-size: 1.05rem;
     }
     .main5_admins_dev_type1 {
         padding-right: 0;
@@ -736,19 +882,58 @@ body {
     .main5_admins_dev_type2 {
         padding-left: 0;
     }
-}
-@media only screen and (max-width: 360px) {
-    .main3_join_categories {
-        font-size:1rem;
-    }
-    .main3_join_values {
-        font-size:1rem;
+
+    /* How to join */
+    .main3_join_div_div {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 0 1rem;
+        margin: 1rem 0;
+        box-sizing: border-box;
     }
     .main3_join_div {
-        min-width: 10rem;
-        padding: .5rem;
+        width: 100%;
+        max-width: 22rem;
+        min-width: 0;
+        height: auto;
+        min-height: 0;
+        margin: 0.6rem 0;
+        padding: 1rem;
+        box-sizing: border-box;
     }
-    .main3_join_div_div {
-        margin: .25rem;
+    .main3_join_title {
+        font-size: 1.35rem;
+    }
+    .main3_join_content_div {
+        padding: 0.75rem 0.5rem;
+        box-sizing: border-box;
+    }
+    .main3_join_categories {
+        font-size: 1.1rem;
+        padding-right: 0.5rem;
+    }
+    .main3_join_values {
+        font-size: 1.05rem;
+        padding-left: 0.5rem;
+        word-break: break-word;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .main1_description {
+        font-size: 1.55rem;
+    }
+    .main1_ipcopier_text1 {
+        font-size: 1.05rem;
+    }
+    .main3_join_categories {
+        font-size: 0.95rem;
+    }
+    .main3_join_values {
+        font-size: 0.95rem;
+    }
+    .main3_join_div {
+        padding: 0.6rem;
     }
 }
