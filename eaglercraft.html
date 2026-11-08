@@ -55,7 +55,9 @@
         align-items: center;
         justify-content: center;
         text-align: center;
-        padding: 7rem 2rem 3rem 2rem;
+        min-height: calc(100vh - 4.5rem);
+        padding: 7rem 2rem 4rem 2rem;
+        box-sizing: border-box;
         background: radial-gradient(circle at center, #262c33 0%, var(--background1) 70%);
       }
       .eagler_logo {
@@ -73,30 +75,9 @@
       .eagler_hero_subtitle {
         font-size: 1.35rem;
         max-width: 44rem;
-        margin: 1.2rem auto 2rem auto;
+        margin: 1.2rem auto 2.5rem auto;
         color: #d1d5db;
         line-height: 1.6;
-      }
-      .eagler_badge_row {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.8rem;
-        justify-content: center;
-        margin-bottom: 2.5rem;
-      }
-      .eagler_badge {
-        background-color: var(--background2);
-        border: 1px solid rgba(255,255,255,0.1);
-        border-radius: 9999px;
-        padding: 0.4rem 1rem;
-        font-size: 0.95rem;
-        color: #e5e7eb;
-        display: inline-flex;
-        align-items: center;
-        gap: 0.5rem;
-      }
-      .eagler_badge i {
-        color: var(--accent1);
       }
       .eagler_btn_group {
         display: flex;
@@ -137,85 +118,6 @@
         transform: translateY(-3px) scale(1.03);
         box-shadow: 0 8px 25px rgba(2, 219, 2, 0.25);
       }
-      .eagler_cards_section {
-        background-color: var(--background2);
-        padding: 3rem 1rem 4rem 1rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-      .eagler_grid {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 1.5rem;
-        max-width: 72rem;
-        margin-top: 2rem;
-      }
-      .eagler_card {
-        background-color: var(--background1);
-        border: 1px solid rgba(255,255,255,0.06);
-        border-radius: var(--roundness);
-        padding: 2rem;
-        width: 19rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        transition: transform 0.3s, background-color 0.3s;
-      }
-      .eagler_card:hover {
-        transform: translateY(-6px);
-        background-color: #1a1e22;
-        border-color: rgba(2, 219, 2, 0.3);
-      }
-      .eagler_card_icon {
-        color: var(--accent1);
-        font-size: 2.8rem;
-        margin-bottom: 1.2rem;
-      }
-      .eagler_card_title {
-        font-size: 1.45rem;
-        font-weight: 700;
-        color: #fff;
-        margin-bottom: 0.8rem;
-      }
-      .eagler_card_desc {
-        font-size: 1.05rem;
-        color: #9ca3af;
-        line-height: 1.55;
-      }
-      .guide_section {
-        padding: 4rem 1.5rem;
-        max-width: 55rem;
-        margin: 0 auto;
-      }
-      .guide_step {
-        display: flex;
-        gap: 1.5rem;
-        margin-bottom: 2rem;
-        background-color: var(--background2);
-        padding: 1.5rem;
-        border-radius: var(--roundness);
-        border-left: 4px solid var(--accent1);
-      }
-      .guide_step_num {
-        font-size: 1.8rem;
-        font-weight: 700;
-        color: var(--accent1);
-        min-width: 2.5rem;
-      }
-      .guide_step_content h3 {
-        margin: 0 0 0.5rem 0;
-        font-size: 1.3rem;
-        color: #fff;
-      }
-      .guide_step_content p {
-        margin: 0;
-        color: #d1d5db;
-        line-height: 1.5;
-        font-size: 1.05rem;
-      }
     </style>
   </head>
   <body>
@@ -226,11 +128,12 @@
       <a href="index.html#discord" class="desktop_navbar_link">Discord</a>
       <a href="index.html#about" class="desktop_navbar_link">About Us</a>
       <a href="https://stats.hbwmcofficial.xyz" target="_blank" rel="noopener noreferrer" class="desktop_navbar_link">Live Stats</a>
+      <a href="https://modrinth.com/project/QSHwl7gZ" target="_blank" rel="noopener noreferrer" class="desktop_navbar_link">Modpack</a>
       <div class="desktop_navbar_dropdown">
         <a href="eaglercraft.html" class="desktop_navbar_link" style="color: var(--accent1); font-weight: 700;">Eaglercraft</a>
         <div class="desktop_navbar_dropdown_content">
-          <a href="https://skiingbeast2025.github.io/lunamix-eaglercraft/downloads/hbwmc.html" target="_blank" rel="noopener noreferrer"><i class="fa fa-play-circle"></i> Play in Browser (Web)</a>
-          <a href="https://github.com/skiingbeast2025/lunamix-eaglercraft/releases/latest/download/HBWMC-EAGLERCRAFT.html" download="HBWMC-EAGLERCRAFT.html"><i class="fa fa-download"></i> Download Client (.html)</a>
+          <a href="https://skiingbeast2025.github.io/lunamix-eaglercraft/downloads/hbwmc.html" target="_blank" rel="noopener noreferrer"><i class="fa fa-play-circle"></i> Play in Browser</a>
+          <a href="https://github.com/skiingbeast2025/lunamix-eaglercraft/releases/latest/download/HBWMC-EAGLERCRAFT.html" download="HBWMC-EAGLERCRAFT.html"><i class="fa fa-download"></i> Download Client</a>
         </div>
       </div>
       <div class="desktop_navbar_link2_div">
@@ -245,6 +148,7 @@
         <a class="mobile_navbar_link" href="index.html#discord">Discord</a>
         <a class="mobile_navbar_link" href="index.html#about">About Us</a>
         <a class="mobile_navbar_link" href="https://stats.hbwmcofficial.xyz" target="_blank" rel="noopener noreferrer">Live Stats</a>
+        <a class="mobile_navbar_link" href="https://modrinth.com/project/QSHwl7gZ" target="_blank" rel="noopener noreferrer">Modpack</a>
         <a class="mobile_navbar_link" href="https://skiingbeast2025.github.io/lunamix-eaglercraft/downloads/hbwmc.html" target="_blank" rel="noopener noreferrer"><i class="fa fa-play-circle"></i> Play in Browser</a>
         <a class="mobile_navbar_link" href="https://github.com/skiingbeast2025/lunamix-eaglercraft/releases/latest/download/HBWMC-EAGLERCRAFT.html" download="HBWMC-EAGLERCRAFT.html"><i class="fa fa-download"></i> Download Client</a>
         <a class="mobile_navbar_link" href="index.html#join">Join Us</a>
@@ -269,87 +173,16 @@
         <img class="eagler_logo" src="media/HB_pandas_minecraft_block_trans.webp" alt="HBWMC Logo">
         <h1 class="eagler_hero_title">HBWMC <span style="color: var(--accent1);">Eaglercraft</span></h1>
         <p class="eagler_hero_subtitle">
-          Play Minecraft directly in your web browser or download the standalone offline HTML client. Zero install required — works on Chromebooks, MacBooks, Windows, and Linux.
+          Play Minecraft directly in your web browser or download the standalone offline HTML client.
         </p>
-
-        <div class="eagler_badge_row">
-          <div class="eagler_badge"><i class="fa fa-server"></i> Server: play.hbwmcofficial.xyz</div>
-          <div class="eagler_badge"><i class="fa fa-shield"></i> Dual Wisp Relays</div>
-          <div class="eagler_badge"><i class="fa fa-check-circle"></i> No Java or Admin Needed</div>
-          <div class="eagler_badge"><i class="fa fa-users"></i> Cross-Play with Java & Bedrock</div>
-        </div>
 
         <div class="eagler_btn_group">
           <a href="https://skiingbeast2025.github.io/lunamix-eaglercraft/downloads/hbwmc.html" target="_blank" rel="noopener noreferrer" class="eagler_btn eagler_btn_primary">
-            <i class="fa fa-play-circle"></i> Play in Browser (Web)
+            <i class="fa fa-play-circle"></i> Play in Browser
           </a>
           <a href="https://github.com/skiingbeast2025/lunamix-eaglercraft/releases/latest/download/HBWMC-EAGLERCRAFT.html" download="HBWMC-EAGLERCRAFT.html" class="eagler_btn eagler_btn_secondary">
-            <i class="fa fa-download"></i> Download Client (.html)
+            <i class="fa fa-download"></i> Download Client
           </a>
-        </div>
-      </section>
-
-      <section class="eagler_cards_section">
-        <a class="headline">Key Features</a>
-        <div class="eagler_grid">
-          <div class="eagler_card">
-            <i class="fa fa-server eagler_card_icon"></i>
-            <div class="eagler_card_title">Default Server Built-In</div>
-            <div class="eagler_card_desc">
-              <strong>play.hbwmcofficial.xyz</strong> is automatically set as the default server in your multiplayer list. No manual IP setup required.
-            </div>
-          </div>
-
-          <div class="eagler_card">
-            <i class="fa fa-random eagler_card_icon"></i>
-            <div class="eagler_card_title">Dual Wisp Relays</div>
-            <div class="eagler_card_desc">
-              Connected via high-speed Wisp relays (mercurywork.shop and al3x.dev) with automatic failover if a relay goes offline.
-            </div>
-          </div>
-
-          <div class="eagler_card">
-            <i class="fa fa-laptop eagler_card_icon"></i>
-            <div class="eagler_card_title">School & Chromebook Ready</div>
-            <div class="eagler_card_desc">
-              Hosted on GitHub releases and pages to bypass personal Google account restrictions. Pure WebAssembly that runs in browser tabs.
-            </div>
-          </div>
-
-          <div class="eagler_card">
-            <i class="fa fa-apple eagler_card_icon"></i>
-            <div class="eagler_card_title">MacBook & PC Optimized</div>
-            <div class="eagler_card_desc">
-              Double-click the downloaded HTML file on any Mac or PC to play offline. Use <code>fn+F3</code> for coordinates and <code>fn+F6</code> for relay settings.
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="guide_section">
-        <a class="headline" style="text-align: center; display: block; margin-bottom: 2.5rem;">How to Get Started</a>
-        <div class="guide_step">
-          <div class="guide_step_num">1</div>
-          <div class="guide_step_content">
-            <h3>Choose How You Want to Play</h3>
-            <p>Click <strong>Play in Browser</strong> to launch the web client instantly, or click <strong>Download Client (.html)</strong> to save the self-contained offline version to your device.</p>
-          </div>
-        </div>
-
-        <div class="guide_step">
-          <div class="guide_step_num">2</div>
-          <div class="guide_step_content">
-            <h3>Open Multiplayer</h3>
-            <p>Once the game title screen appears, click <strong>Multiplayer</strong>. You will see <strong>HBW Minecraft Server</strong> already waiting in your list.</p>
-          </div>
-        </div>
-
-        <div class="guide_step">
-          <div class="guide_step_num">3</div>
-          <div class="guide_step_content">
-            <h3>Connect & Login</h3>
-            <p>Click on <strong>HBW Minecraft Server</strong> and select <strong>Join Server</strong>. Once in the authentication lobby, use <code>/register &lt;password&gt; &lt;password&gt;</code> to protect your account and start playing!</p>
-          </div>
         </div>
       </section>
     </div>
