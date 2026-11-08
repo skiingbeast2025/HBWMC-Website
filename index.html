@@ -51,7 +51,7 @@
       }
     </style>
 </head>
-<body>
+  <body>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <nav class="desktop_navbar">
       <a href="#"><img class="desktop_navbar_logo_img" src="media/HB_pandas_minecraft_block_trans.webp" alt="logo"></a>
@@ -64,8 +64,8 @@
         <a href="eaglercraft.html" class="desktop_navbar_link">Eaglercraft</a>
         <div class="desktop_navbar_dropdown_content">
           <a href="eaglercraft.html"><i class="fa fa-info-circle"></i> Eaglercraft Hub</a>
-          <a href="https://github.com/skiingbeast2025/lunamix-eaglercraft/releases/latest/download/HBWMC-EAGLERCRAFT.html" download="HBWMC-EAGLERCRAFT.html"><i class="fa fa-download"></i> Download Client (.html)</a>
-          <a href="https://skiingbeast2025.github.io/lunamix-eaglercraft/downloads/hbwmc.html" target="_blank" rel="noopener noreferrer"><i class="fa fa-play-circle"></i> Play in Browser (Web)</a>
+          <a href="https://github.com/skiingbeast2025/lunamix-eaglercraft/releases/latest/download/HBWMC-EAGLERCRAFT.html" download="HBWMC-EAGLERCRAFT.html"><i class="fa fa-download"></i> Download Client</a>
+          <a href="https://skiingbeast2025.github.io/lunamix-eaglercraft/downloads/hbwmc.html" target="_blank" rel="noopener noreferrer"><i class="fa fa-play-circle"></i> Play in Browser</a>
         </div>
       </div>
       <div class="desktop_navbar_link2_div">
@@ -82,7 +82,7 @@
           <a class="mobile_navbar_link" href="https://modrinth.com/project/QSHwl7gZ" target="_blank" rel="noopener noreferrer">Client Modpack</a>
           <a class="mobile_navbar_link" href="eaglercraft.html"><i class="fa fa-info-circle"></i> Eaglercraft Hub</a>
           <a class="mobile_navbar_link" onclick="mobile_navbar_link_hider()" href="https://github.com/skiingbeast2025/lunamix-eaglercraft/releases/latest/download/HBWMC-EAGLERCRAFT.html" download="HBWMC-EAGLERCRAFT.html"><i class="fa fa-download"></i> Download Eaglercraft</a>
-          <a class="mobile_navbar_link" onclick="mobile_navbar_link_hider()" href="https://skiingbeast2025.github.io/lunamix-eaglercraft/downloads/hbwmc.html" target="_blank" rel="noopener noreferrer"><i class="fa fa-play-circle"></i> Play Eaglercraft (Web)</a>
+          <a class="mobile_navbar_link" onclick="mobile_navbar_link_hider()" href="https://skiingbeast2025.github.io/lunamix-eaglercraft/downloads/hbwmc.html" target="_blank" rel="noopener noreferrer"><i class="fa fa-play-circle"></i> Play Eaglercraft</a>
           <a class="mobile_navbar_link scroll" onclick="mobile_navbar_link_hider()" href="#join">Join Us</a>
         </div>
         <div class="icon" onclick="mobile_navbar_link_hider()">
@@ -101,166 +101,91 @@
     </div>
     <div class="mainflex">
       <div class="main1">
-        <a class="main1_logo_a" href="#">
-          <img class="main1_logo" src="media/HB_pandas_minecraft_block_trans.webp" alt="logo">
-        </a>
-        <div class="main1_description">
-          <a>The official<br>HBW</a>
-          <a class="main1_actcent">Minecraft server!</a><a></a>
+        <a class="main1_logo_a"><img class="main1_logo" src="media/HB_pandas_minecraft_block_trans.webp" alt="logo"></a>
+        <div class="main1_headline_name_div">
+          <p class="main1_headline_name">HBWMC</p>
         </div>
-        <div class="main1_ipcopier_div">
-          <button class="main1_ipcopier" onclick="copyText()" type="button">
-            <span class="main1_ipcopier_text1">play.hbwmcofficial.xyz</span>
-            <br>
-            <span class="main1_ipcopier_text2">Click to copy</span>
-          </button>
-          <script>
-            function copyText() {
-                navigator.clipboard.writeText
-            ("play.hbwmcofficial.xyz");
-                }
-            $(document).ready(function() {
-            $('.main1_ipcopier').click(function() {
-                var popup = $('<div>', { class: 'main1_popup' })
-                .append($('<h3 class="copy_confirm">').text('Copied IP to clipboard'))
-                $(this).after(popup);
-                setTimeout(function() {
-                popup.remove();
-                }, 1000);
-            });
-            });
-        </script>
+        <p class="main1_headline_title">A friendly Minecraft server for everyone.</p>
+        <div class="main1_buttons_div">
+          <a href="#join" class="main1_button_join scroll">How to join</a>
         </div>
-        <a href="#more" class="scroll">
-          <img alt="downarrow" class="main1_downarrow" src="media/downarrow.png">
-        </a>
-        <script>
-          const scrollLinks = document.querySelectorAll('.scroll');
-          scrollLinks.forEach(function(link) {
-            link.addEventListener('click', function(event) {
-              event.preventDefault();
-              const target = document.querySelector(link.getAttribute('href'));
-              const offsetTop = target.offsetTop;
-              window.scrollTo({
-                top: offsetTop,
-                behavior: 'smooth'
-              });
-            });
-          });
-        </script>
       </div>
-      <div id="features"></div>
-      <div id="more"></div>
-      <div class="main2">
-        <a class="headline">What we have</a>
+      <div id="features" class="main2">
+        <a class="headline">Features</a>
         <div class="main2_features_div">
           <div class="main2_feature">
-            <img class="main2_feature_img" alt="Feature Image" src="media/placeholder.png">
-            <a class="main2_feature_headline">Survival SMP</a>
-            <a class="main2_feature_text">Vanilla gameplay enhanced with TPA, homes, and more!</a>
+            <img class="main2_feature_img" src="media/panda.webp" alt="Feature Image">
+            <a class="main2_feature_headline">Chill & Relaxed</a>
+            <a class="main2_feature_text">Play, build, and explore in a stress-free environment surrounded by pandas and friendly players.</a>
           </div>
           <div class="main2_feature">
-            <img class="main2_feature_img" alt="Feature Image" src="media/2.webp">
-            <a class="main2_feature_headline">Cross-Play Support</a>
-            <a class="main2_feature_text">Play together from Java Edition on PC or Bedrock on Console & Mobile, and more.</a>
+            <img class="main2_feature_img" src="media/cherry.webp" alt="Feature Image">
+            <a class="main2_feature_headline">Vanilla Experience</a>
+            <a class="main2_feature_text">Pure, unadulterated gameplay with just the right amount of quality-of-life improvements.</a>
           </div>
           <div class="main2_feature">
-            <img class="main2_feature_img" alt="Feature Image" src="media/d763033c0a78789d1be950487fadb53c-staysafe_header.png">
-            <a class="main2_feature_headline">Proximity Voice Chat</a>
-            <a class="main2_feature_text">Immersive in-game 3D directional voice audio powered by Plasmo Voice.</a>
+            <img class="main2_feature_img" src="media/house.webp" alt="Feature Image">
+            <a class="main2_feature_headline">Grief Prevention</a>
+            <a class="main2_feature_text">Your builds are safe! Claim your land and build without worrying about griefers.</a>
           </div>
           <div class="main2_feature">
-            <img class="main2_feature_img" alt="Feature Image" src="media/legacy_world.png">
-            <a class="main2_feature_headline">Legacy World</a>
-            <a class="main2_feature_text">Play on the original HBW Minecraft server to see how we first started, with more strict rules on greifing and stealing.</a>
+            <img class="main2_feature_img" src="media/server.webp" alt="Feature Image">
+            <a class="main2_feature_headline">24/7 Uptime</a>
+            <a class="main2_feature_text">Reliable performance hosted on dedicated hardware so you can play anytime.</a>
+          </div>
+          <div class="main2_feature">
+            <img class="main2_feature_img" src="media/heart.webp" alt="Feature Image">
+            <a class="main2_feature_headline">Active Community</a>
+            <a class="main2_feature_text">Join a growing community of builders, explorers, and redstone engineers.</a>
+          </div>
+          <div class="main2_feature">
+            <img class="main2_feature_img" src="media/sword.webp" alt="Feature Image">
+            <a class="main2_feature_headline">Community Events</a>
+            <a class="main2_feature_text">Participate in build competitions, scavenger hunts, and seasonal celebrations.</a>
           </div>
         </div>
       </div>
-            <div id="discord"></div>
-      <div class="main4">
-        <a class="headline">Join the Discord</a>
+      <div id="discord" class="main4">
+        <a class="headline">Discord</a>
         <div class="main4_dc_div">
-          <widgetbot server="1449486960224632996" width="350" height="500" class="main4_dc_widget"></widgetbot>
-          <script src="https://cdn.jsdelivr.net/npm/@widgetbot/html-embed"></script>
-          <div class="main4_dc_description_div">
-            <a class="main4_dc_description_title">Let's talk!</a>
-            <a class="main4_dc_description"> ・Meet other players <br> ・Ask questions <br> ・Get notified about updates <br> ・Give feedback  <br><br> &amp; more </a>
-            <a href="https://discord.gg/q5334gxAGC" class="main4_dc_button_a">
-              <div class="main4_dc_button">Join</div>
-            </a>
-          </div>
+          <p class="main4_dc_description">Join our Discord community to stay up to date with server announcements, report issues, and chat with other players.</p>
+          <a href="https://discord.gg/yourinvite" target="_blank" rel="noopener noreferrer" class="main4_dc_button_a">
+            <div class="main4_dc_button">Join Discord</div>
+          </a>
         </div>
       </div>
-      <div id="about"></div>
-      <div class="main5">
-        <a class="headline">Who we are</a>
-        <div class="main5_admin_div">
-          <div class="main5_admins_div main5_admins_dev_type2">
-            <img class="main5_admins_img" alt="admin member img" src="media/skiing-propic.png">
-            <div class="main5_admins_description_div">
-              <a class="main5_admins_description_rank main5_admins_description_rank_owner">[Owner]</a>
-              <a class="main5_admins_description_title" href="https://www.whydidyouclickonthat.com/">Skiingbeast1234</a>
-              <a class="main5_admins_description">Owner<br>Main staff member and original server creator.</a>
-            </div>
-          </div>
-          <div class="main5_admins_div main5_admins_dev_type1">
-            <img class="main5_admins_img" alt="admin member img" src="media/amiti-propic.webp">
-            <div class="main5_admins_description_div">
-              <a class="main5_admins_description_rank main5_admins_description_rank_admin">[Moderator]</a>
-              <a class="main5_admins_description_title" href="https://www.whydidyouclickonthat.com/">Amiti87</a>
-              <a class="main5_admins_description">Moderator<br>Serves to help in moderating the server's large playerbase.</a>
-            </div>
-          </div>
-          <div class="main5_admins_div main5_admins_dev_type2">
-            <img class="main5_admins_img" alt="admin member img" src="media/lunamix-propic.webp">
-            <div class="main5_admins_description_div">
-              <a class="main5_admins_description_rank main5_admins_description_rank_helper" style="color: #55ffff;">[Helper]</a>
-              <a class="main5_admins_description_title" href="https://www.whydidyouclickonthat.com/">Lunamix</a>
-              <a class="main5_admins_description">Helper<br>Helped in building many structues around the server and helps in play testing.</a>
-            </div>
-          </div>
+      <div id="about" class="about_section">
+        <a class="headline">About Us</a>
+        <div class="about_content_div">
+          <p class="about_text">HBWMC was started as a welcoming space for Minecraft players of all skill levels. Whether you want to build massive megastructures, explore the infinite world, or just relax and farm, you'll find a home here. We are committed to keeping the server fun, fair, and accessible for everyone.</p>
         </div>
       </div>
-      <div id="join"></div>
-      <div class="main3">
+      <div id="join" class="main3">
         <a class="headline">How to join</a>
-        <div class="main3_join_div_div">
+        <div class="main3_join_div_supported">
           <div class="main3_join_div">
-            <a class="main3_join_title">Java</a>
+            <a class="main3_join_title">Java Edition</a>
             <div class="main3_join_content_div">
               <div class="main3_join_categories">
                 <a>IP:</a>
                 <a>Version:</a>
               </div>
               <div class="main3_join_values">
-                <a>play.hbwmcofficial.xyz</a>
-                <a>26.2 (but you can join with 1.16-26.3)</a>
+                <a onclick="copy('play.hbwmcofficial.xyz')">play.hbwmcofficial.xyz</a>
+                <a>1.20 - 1.21.x</a>
               </div>
             </div>
           </div>
           <div class="main3_join_div">
-            <a class="main3_join_title">Bedrock</a>
+            <a class="main3_join_title">Bedrock Edition</a>
             <div class="main3_join_content_div">
               <div class="main3_join_categories">
                 <a>IP:</a>
                 <a>Port:</a>
               </div>
               <div class="main3_join_values">
-                <a>play.hbwmcofficial.xyz</a>
+                <a onclick="copy('play.hbwmcofficial.xyz')">play.hbwmcofficial.xyz</a>
                 <a>19132</a>
-              </div>
-            </div>
-          </div>
-          <div class="main3_join_div">
-            <a class="main3_join_title">Web / Chromebook & Mac</a>
-            <div class="main3_join_content_div">
-              <div class="main3_join_categories">
-                <a>Play Online:</a>
-                <a>Download:</a>
-              </div>
-              <div class="main3_join_values">
-                <a href="https://skiingbeast2025.github.io/lunamix-eaglercraft/downloads/hbwmc.html" target="_blank" rel="noopener noreferrer" style="color: #55ffff; text-decoration: underline;">Browser Client</a>
-                <a href="https://github.com/skiingbeast2025/lunamix-eaglercraft/releases/latest/download/HBWMC-EAGLERCRAFT.html" style="color: #ffaa00; text-decoration: underline;">Offline HTML</a>
               </div>
             </div>
           </div>
@@ -274,6 +199,19 @@
               <div class="main3_join_values">
                 <a href="https://modrinth.com/project/QSHwl7gZ" target="_blank" rel="noopener noreferrer" style="color: #22CC66; text-decoration: underline;">Official Pack</a>
                 <a>Voice Chat & FPS</a>
+              </div>
+            </div>
+          </div>
+          <div class="main3_join_div">
+            <a class="main3_join_title">Eaglercraft (Web)</a>
+            <div class="main3_join_content_div">
+              <div class="main3_join_categories">
+                <a>Direct Web:</a>
+                <a>Client (.html):</a>
+              </div>
+              <div class="main3_join_values">
+                <a href="https://skiingbeast2025.github.io/lunamix-eaglercraft/downloads/hbwmc.html" target="_blank" rel="noopener noreferrer" style="color: #02db02; text-decoration: underline;">Launch in Browser</a>
+                <a href="https://github.com/skiingbeast2025/lunamix-eaglercraft/releases/latest/download/HBWMC-EAGLERCRAFT.html" download="HBWMC-EAGLERCRAFT.html" style="color: #02db02; text-decoration: underline;">Download Client</a>
               </div>
             </div>
           </div>
